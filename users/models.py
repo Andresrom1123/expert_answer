@@ -1,3 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser, User
+from rest_framework.exceptions import ValidationError
 
-# Create your models here.
+
+class CustomUser(AbstractUser):
+    email = models.EmailField(unique=True)
