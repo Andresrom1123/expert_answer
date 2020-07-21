@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'answers.apps.AnswersConfig',
     'questions.apps.QuestionsConfig',
     'topics.apps.TopicsConfig',
-    'comments.apps.CommentsConfig'
+    'comments.apps.CommentsConfig',
+    'interests'
 ]
 
 MIDDLEWARE = [
