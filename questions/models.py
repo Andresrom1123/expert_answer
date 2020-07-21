@@ -10,7 +10,7 @@ class Question(models.Model):
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE, related_name='topic_question')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_question')
     followers = models.ManyToManyField(User, related_name='followers_question')
-    created_at = models.DateTimeField(default=timezone.now())
+    created_at = models.DateTimeField(auto_created=timezone.now)
 
     def __str__(self):
         return self.question
