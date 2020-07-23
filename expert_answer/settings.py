@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['expertanswerapp.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'rest_framework_swagger',
     'rest_framework',
     'django.contrib.admin',
@@ -49,6 +50,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -140,5 +143,9 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+CORS_ORIGIN_WHITELIST = [
+    "https://expertanswerapp.herokuapp.com"
+]
 
 django_heroku.settings(locals())
