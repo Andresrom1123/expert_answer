@@ -145,7 +145,9 @@ REST_FRAMEWORK = {
 AUTH_USER_MODEL = 'users.CustomUser'
 
 CORS_ORIGIN_WHITELIST = [
-    "https://expertanswerapp.herokuapp.com"
+    "https://expertanswerapp.herokuapp.com",
+    "http://localhost:3000",
+    "https://dev-expert-answers.netlify.app"
 ]
 
 django_heroku.settings(locals())
