@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 
 from questions.models import Question
+from questions.serializers import QuestionSerializer
 
 
 class QuestionViewSet(viewsets.ModelViewSet):
@@ -18,4 +19,4 @@ class QuestionViewSet(viewsets.ModelViewSet):
     """
 
     queryset = Question.objects.all()
-    fields = '__all__'
+    serializer_class = QuestionSerializer
