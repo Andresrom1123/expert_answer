@@ -28,7 +28,6 @@ class UserForm(BaseUserManager):
 
 class CustomUser(AbstractUser):
     email = models.EmailField(unique=True, max_length=60)
-    username = models.CharField(null=True, max_length=30)
     is_admin = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
 
